@@ -210,7 +210,7 @@ var CHALLENGES = [
     } },
   { id: 'css-class', title: 'استخدم class',
     desc: 'ضيف attribute class لأي عنصر في الصفحة، واعمله rule في الـ CSS بنفس الاسم بأي خاصية.',
-    hint: '<p class="intro">..</p> وفي الـ CSS: .intro { font-size: 18px; }',
+    hint: 'HTML: <p class="intro">..</p> + CSS: .intro { font-size: 18px; }',
     check: function (doc, css) {
       var classes = {};
       eachEl(doc.root, function (el) { elClasses(el).forEach(function (c) { classes[c] = 1; }); });
