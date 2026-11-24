@@ -170,7 +170,7 @@ li:first-child {
     { type: 'code', code: `p { color: black; }        /* element: أضعف */
 .intro { color: green; }   /* class: أقوى */
 #hero { color: blue; }     /* id: الأقوى */
-<!-- <p class="intro" id="hero"> هيبقى أزرق -->` },
+/* لو العنصر <p class="intro" id="hero"> هيبقى أزرق */` },
     { type: 'note', warn: true, text: 'متحطش `!important` في آخر الخاصية عشان تكسب بالعافية. دي بتكسر نظام الـ specificity كله وبتخلي الكود جحيم في الصيانة. لو محتاج تغلب قاعدة، اكتب selector أدق.' }
   ],
   quiz: [
