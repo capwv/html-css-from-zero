@@ -231,6 +231,12 @@ var CHALLENGES = [
     check: function (doc, css) {
       return css.rules.some(function (r) { return r.props.display === 'flex'; });
     } },
+  { id: 'grid', title: 'رتبها بـ Grid',
+    desc: 'أي rule فيها display: grid و grid-template-columns. الشبكة ثنائية الأبعاد دخيلة العدة.',
+    hint: '.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }',
+    check: function (doc, css) {
+      return css.rules.some(function (r) { return r.props.display === 'grid' && r.props['grid-template-columns'] !== undefined; });
+    } },
   { id: 'responsive', title: 'خليه responsive',
     desc: 'ضيف @media query فيها max-width وجوّاها rule واحدة على الأقل بتتطبق على الموبايل.',
     hint: '@media (max-width: 600px) { main { flex-direction: column; } }',
