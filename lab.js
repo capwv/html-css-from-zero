@@ -62,7 +62,7 @@ function buildPanel() {
     box.className = 'mission';
     box.innerHTML =
       '<div class="m-title"><span class="m-check"></span>' + ch.title + '</div>' +
-      '<p>' + ch.desc + '</p>' +
+      '<p>' + ch.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</p>' +
       '<div class="m-hint">💡 تلميح: <code dir="ltr">' + ch.hint.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</code></div>';
     panel.appendChild(box);
     itemEls[ch.id] = box;
